@@ -31,6 +31,7 @@ public class ServiceCategory implements IServiceCategory {
             Post p  = new Post();
 
             p.setCategory(master);
+            p.setPublicationDate(post.getPublicationDate());
             p.setSaveCount(post.getSaveCount());
             p.setCaption(post.getCaption());
 

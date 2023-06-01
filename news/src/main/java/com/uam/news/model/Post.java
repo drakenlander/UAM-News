@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Entity
@@ -22,7 +22,7 @@ public class Post {
     @SequenceGenerator(name="post_seq", sequenceName = "post_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "post_seq")
     private Long postId;
-    //private LocalDate publicationDate;
+    private LocalDateTime publicationDate;
     private int saveCount;
     private String caption;
     @ManyToOne(fetch = FetchType.LAZY)

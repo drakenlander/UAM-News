@@ -46,6 +46,7 @@ public class ServiceDepartment implements IServiceDepartment {
             Post p = new Post();
 
             p.setDepartment(master);
+            p.setPublicationDate(post.getPublicationDate());
             p.setSaveCount(post.getSaveCount());
             p.setCaption(post.getCaption());
 
