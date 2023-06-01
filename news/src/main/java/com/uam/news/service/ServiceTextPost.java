@@ -24,6 +24,7 @@ public class ServiceTextPost implements IServiceTextPost {
         txt.setPostId(textpostDto.getPostId());
         txt.setSaveCount(textpostDto.getSaveCount());
         txt.setCaption(textpostDto.getCaption());
+        txt.setDepartment(textpostDto.getDepartment());
         txt.setCategory(textpostDto.getCategory());
 
         return repo.save(txt);

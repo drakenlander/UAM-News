@@ -27,4 +27,8 @@ public class Department {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonIgnore
     private List<Usuario> details;
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonIgnore
+    private List<Post> pDetails;
 }

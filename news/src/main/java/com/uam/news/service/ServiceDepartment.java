@@ -2,6 +2,7 @@ package com.uam.news.service;
 
 import com.uam.news.dto.DepartmentDto;
 import com.uam.news.model.Department;
+import com.uam.news.model.Post;
 import com.uam.news.model.Usuario;
 import com.uam.news.repository.IRepositoryDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class ServiceDepartment implements IServiceDepartment {
     public Department save(DepartmentDto departmentDto) {
         List<Usuario> details  = departmentDto.getDetails();
         List<Usuario> data = new ArrayList<>();
+        List<Post> pDetails = departmentDto.getPDetails();
+        List<Post> pData = new ArrayList<>();
 
         Department master = new Department();
         master.setName(departmentDto.getName());
@@ -39,7 +42,18 @@ public class ServiceDepartment implements IServiceDepartment {
             data.add(us);
         }
 
+        for (Post post : pDetails) {
+            Post p = new Post();
+
+            p.setDepartment(master);
+            p.setSaveCount(post.getSaveCount());
+            p.setCaption(post.getCaption());
+
+            pData.add(p);
+        }
+
         //master.setDetails(data);
+        //master.setPDetails(pData);
         return repo.save(master);
     }
 

@@ -24,6 +24,7 @@ public class ServiceImagePost implements IServiceImagePost {
         img.setPostId(imagePostDto.getPostId());
         img.setSaveCount(imagePostDto.getSaveCount());
         img.setCaption(imagePostDto.getCaption());
+        img.setDepartment(imagePostDto.getDepartment());
         img.setCategory(imagePostDto.getCategory());
         img.setUrl(imagePostDto.getUrl());
 
