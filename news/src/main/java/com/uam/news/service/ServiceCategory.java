@@ -37,7 +37,7 @@ public class ServiceCategory implements IServiceCategory {
             data.add(p);
         }
 
-        master.setDetails(data);
+        //master.setDetails(data);
         return repo.save(master);
     }
 

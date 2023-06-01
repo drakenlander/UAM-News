@@ -1,5 +1,6 @@
 package com.uam.news.service;
 
+import com.uam.news.dto.LoginResponse;
 import com.uam.news.dto.OriginalPosterDto;
 import com.uam.news.model.OriginalPoster;
 import com.uam.news.repository.IRepositoryOriginalPoster;
@@ -16,6 +17,18 @@ public class ServiceOriginalPoster implements IServiceOriginalPoster {
     @Override
     public List<OriginalPoster> getAll() {
         return repo.findAll();
+    }
+
+    @Override
+    public LoginResponse getUser(String email, String password) {
+        LoginResponse lr = new LoginResponse(false, "Unable to connect...");
+        OriginalPoster u = repo.getUserByUser(email, password);
+
+        if (u != null) {
+            lr = new LoginResponse(true, "Connection stablished!");
+        }
+
+        return lr;
     }
 
     @Override

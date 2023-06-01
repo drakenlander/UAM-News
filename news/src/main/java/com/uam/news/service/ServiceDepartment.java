@@ -39,7 +39,7 @@ public class ServiceDepartment implements IServiceDepartment {
             data.add(us);
         }
 
-        master.setDetails(data);
+        //master.setDetails(data);
         return repo.save(master);
     }
 
