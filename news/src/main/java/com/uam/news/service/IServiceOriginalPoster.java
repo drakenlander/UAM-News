@@ -2,6 +2,7 @@ package com.uam.news.service;
 
 import com.uam.news.dto.LoginResponse;
 import com.uam.news.dto.OriginalPosterDto;
+import com.uam.news.dto.QuickCheck;
 import com.uam.news.model.OriginalPoster;
 import org.springframework.stereotype.Service;
 

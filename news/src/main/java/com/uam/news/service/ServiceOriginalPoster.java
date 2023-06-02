@@ -2,7 +2,9 @@ package com.uam.news.service;
 
 import com.uam.news.dto.LoginResponse;
 import com.uam.news.dto.OriginalPosterDto;
+import com.uam.news.dto.QuickCheck;
 import com.uam.news.model.OriginalPoster;
+import com.uam.news.model.Usuario;
 import com.uam.news.repository.IRepositoryOriginalPoster;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +23,8 @@ public class ServiceOriginalPoster implements IServiceOriginalPoster {
 
     @Override
     public LoginResponse getUser(String email, String password) {
-        LoginResponse lr = new LoginResponse(false, "Unable to connect...");
         OriginalPoster u = repo.getUserByUser(email, password);
+        LoginResponse lr = new LoginResponse(false, "Unable to connect...");
 
         if (u != null) {
             lr = new LoginResponse(true, "Connection stablished!");
