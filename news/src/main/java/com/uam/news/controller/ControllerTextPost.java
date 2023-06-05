@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/TextPost")
+@RequestMapping("/textPost")
 @CrossOrigin("192.*.*.*")
 public class ControllerTextPost {
     @Autowired

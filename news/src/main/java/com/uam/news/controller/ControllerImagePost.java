@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ImagePost")
+@RequestMapping("/imagePost")
 @CrossOrigin("192.*.*.*")
 public class ControllerImagePost {
     @Autowired
