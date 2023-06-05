@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/category")
+@CrossOrigin("192.*.*.*")
 public class ControllerCategory {
     @Autowired
     private IServiceCategory service;

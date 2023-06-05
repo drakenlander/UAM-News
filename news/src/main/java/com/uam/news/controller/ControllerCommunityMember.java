@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/communityMember")
+@CrossOrigin("192.*.*.*")
 public class ControllerCommunityMember {
     @Autowired
     private IServiceCommunityMember service;

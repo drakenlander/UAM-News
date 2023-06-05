@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ImagePost")
+@CrossOrigin("192.*.*.*")
 public class ControllerImagePost {
     @Autowired
     private IServiceImagePost service;

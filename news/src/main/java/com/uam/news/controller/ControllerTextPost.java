@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/TextPost")
+@CrossOrigin("192.*.*.*")
 public class ControllerTextPost {
     @Autowired
     private IServiceTextPost service;
