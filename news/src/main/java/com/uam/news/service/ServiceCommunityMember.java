@@ -20,6 +20,10 @@ public class ServiceCommunityMember implements IServiceCommunityMember {
         return repo.findAll();
     }
 
+    public CommunityMember getByiD(Long id) {
+        return repo.getReferenceById(id);
+    }
+
     @Override
     public LoginResponse getUser(String email, String password) {
         LoginResponse lr = new LoginResponse(false, "Unable to connect...");
