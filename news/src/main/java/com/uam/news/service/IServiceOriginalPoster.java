@@ -12,6 +12,8 @@ import java.util.List;
 public interface IServiceOriginalPoster {
     public List<OriginalPoster> getAll();
 
+    public OriginalPoster getByiD(Long id);
+
     public LoginResponse getUser(String email, String password);
 
     public OriginalPoster save(OriginalPosterDto originalPosterDto);

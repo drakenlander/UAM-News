@@ -22,6 +22,11 @@ public class ControllerOriginalPoster {
         return service.getAll();
     }
 
+    @GetMapping("/get/{id}")
+    public OriginalPoster getById(Long id) {
+        return service.getByiD(id);
+    }
+
     @GetMapping("/login")
     public LoginResponse getLogin(@Param("email") String email, @Param("password") String password) {
         return service.getUser(email, password);

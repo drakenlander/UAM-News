@@ -22,6 +22,11 @@ public class ServiceOriginalPoster implements IServiceOriginalPoster {
     }
 
     @Override
+    public OriginalPoster getByiD(Long id) {
+        return repo.getReferenceById(id);
+    }
+
+    @Override
     public LoginResponse getUser(String email, String password) {
         OriginalPoster u = repo.getUserByUser(email, password);
         LoginResponse lr = new LoginResponse(false, "Unable to connect...");
