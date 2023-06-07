@@ -29,10 +29,10 @@ public class ServiceOriginalPoster implements IServiceOriginalPoster {
     @Override
     public LoginResponse getUser(String email, String password) {
         OriginalPoster u = repo.getUserByUser(email, password);
-        LoginResponse lr = new LoginResponse(false, "Unable to connect...");
+        LoginResponse lr = new LoginResponse(false, "Unable to connect...", null);
 
         if (u != null) {
-            lr = new LoginResponse(true, "Connection stablished!");
+            lr = new LoginResponse(true, "Connection stablished!", u);
         }
 
         return lr;

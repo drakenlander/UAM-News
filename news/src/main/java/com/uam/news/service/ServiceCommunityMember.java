@@ -22,11 +22,11 @@ public class ServiceCommunityMember implements IServiceCommunityMember {
 
     @Override
     public LoginResponse getUser(String email, String password) {
-        LoginResponse lr = new LoginResponse(false, "Unable to connect...");
+        LoginResponse lr = new LoginResponse(false, "Unable to connect...", null);
         CommunityMember u = repo.getUserByUser(email, password);
 
         if (u != null) {
-            lr = new LoginResponse(true, "Connection stablished!");
+            lr = new LoginResponse(true, "Connection stablished!", u);
         }
 
         return lr;
