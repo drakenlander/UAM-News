@@ -3,6 +3,7 @@ package com.uam.news.controller;
 import com.uam.news.dto.CommunityMemberDto;
 import com.uam.news.dto.LoginResponse;
 import com.uam.news.model.CommunityMember;
+import com.uam.news.model.OriginalPoster;
 import com.uam.news.service.IServiceCommunityMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -19,6 +20,11 @@ public class ControllerCommunityMember {
     @GetMapping("/all")
     public List<CommunityMember> getAll() {
         return service.getAll();
+    }
+
+    @GetMapping("/get/{id}")
+    public CommunityMember getById(Long id) {
+        return service.getByiD(id);
     }
 
     @GetMapping("/login")
